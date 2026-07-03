@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class User {
-    @Id @GeneratedValue private UUID id;
-    private String firstName;
-    private String lastName;
-    private String userName;
-    private String email;
+  @Id @GeneratedValue private UUID id;
+  private String firstName;
+  private String lastName;
+  private String userName;
+  private String email;
 }
