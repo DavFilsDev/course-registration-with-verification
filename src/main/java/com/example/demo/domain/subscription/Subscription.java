@@ -11,19 +11,19 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(
-        name = "subscriptions",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "course_id"}))
+    name = "subscriptions",
+    uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "course_id"}))
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Subscription {
-    @Id @GeneratedValue private UUID id;
+  @Id @GeneratedValue private UUID id;
 
-    @ManyToOne(optional = false)
-    private User user;
+  @ManyToOne(optional = false)
+  private User user;
 
-    @ManyToOne(optional = false)
-    private Course course;
+  @ManyToOne(optional = false)
+  private Course course;
 
-    private Instant subscribedAt;
+  private Instant subscribedAt;
 }

@@ -1,6 +1,6 @@
 package com.example.demo.domain.course;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CourseRepository extends JpaRepository<Course, UUID> {}

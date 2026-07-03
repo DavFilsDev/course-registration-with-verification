@@ -15,12 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class SubscriptionController {
 
-    private final SubscriptionService subscriptionService;
+  private final SubscriptionService subscriptionService;
 
-    @PostMapping("/subscribe")
-    public ResponseEntity<Void> subscribe(
-            @PathVariable UUID userId, @PathVariable UUID courseId) {
-        subscriptionService.subscribe(userId, courseId);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
-    }
+  @PostMapping("/subscribe")
+  public ResponseEntity<Void> subscribe(@PathVariable UUID userId, @PathVariable UUID courseId) {
+    subscriptionService.subscribe(userId, courseId);
+    return ResponseEntity.status(HttpStatus.CREATED).build();
+  }
 }
