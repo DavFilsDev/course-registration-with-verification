@@ -1,6 +1,6 @@
 package com.example.demo.endpoint.rest.controller.subscription;
 
-import com.example.demo.domain.subscription.SubscriptionService;
+import com.example.demo.service.SubscriptionService;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

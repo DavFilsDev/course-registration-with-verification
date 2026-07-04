@@ -1,4 +1,4 @@
-package com.example.demo.domain.subscription;
+package com.example.demo.service;
 
 import com.example.demo.Entity.Subscription;
 import com.example.demo.repository.CourseRepository;
