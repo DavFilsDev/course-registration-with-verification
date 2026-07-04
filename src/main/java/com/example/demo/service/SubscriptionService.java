@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
-import com.example.demo.Entity.Subscription;
+import com.example.demo.entity.Subscription;
+import com.example.demo.exception.AlreadySubscribedException;
+import com.example.demo.exception.NotFoundException;
 import com.example.demo.mail.Email;
 import com.example.demo.mail.Mailer;
 import com.example.demo.repository.CourseRepository;
@@ -25,14 +27,20 @@ public class SubscriptionService {
 
   public Subscription subscribe(UUID userId, UUID courseId) {
     if (subscriptionRepository.existsByUserIdAndCourseId(userId, courseId)) {
-      throw new IllegalStateException("User already subscribed to this course");
+      throw new AlreadySubscribedException(
+          "User " + userId + " already subscribed to course " + courseId);
     }
-    var user = userRepository.findById(userId).orElseThrow();
-    var course = courseRepository.findById(courseId).orElseThrow();
+    var user =
+        userRepository
+            .findById(userId)
+            .orElseThrow(() -> new NotFoundException("User " + userId + " not found"));
+    var course =
+        courseRepository
+            .findById(courseId)
+            .orElseThrow(() -> new NotFoundException("Course " + courseId + " not found"));
 
     var subscription =
         subscriptionRepository.save(new Subscription(null, user, course, Instant.now()));
-
     sendConfirmation(user.getEmail(), user.getFirstName(), course.getTitle());
     return subscription;
   }

@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.endpoint.rest.controller;
 
 import com.example.demo.service.SubscriptionService;
 import java.util.UUID;
