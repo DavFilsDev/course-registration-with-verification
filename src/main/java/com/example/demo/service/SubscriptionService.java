@@ -1,11 +1,11 @@
 package com.example.demo.service;
 
 import com.example.demo.Entity.Subscription;
+import com.example.demo.mail.Email;
+import com.example.demo.mail.Mailer;
 import com.example.demo.repository.CourseRepository;
 import com.example.demo.repository.SubscriptionRepository;
 import com.example.demo.repository.UserRepository;
-import com.example.demo.mail.Email;
-import com.example.demo.mail.Mailer;
 import jakarta.mail.internet.AddressException;
 import jakarta.mail.internet.InternetAddress;
 import java.time.Instant;
