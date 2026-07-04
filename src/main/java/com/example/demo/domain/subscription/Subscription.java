@@ -1,7 +1,7 @@
 package com.example.demo.domain.subscription;
 
 import com.example.demo.domain.course.Course;
-import com.example.demo.domain.user.User;
+import com.example.demo.Entity.User;
 import jakarta.persistence.*;
 import java.time.Instant;
 import java.util.UUID;
