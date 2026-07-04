@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.Entity.Subscription;
+import com.example.demo.entity.Subscription;
 import com.example.demo.exception.AlreadySubscribedException;
 import com.example.demo.exception.NotFoundException;
 import com.example.demo.mail.Email;
