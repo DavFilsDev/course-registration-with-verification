@@ -1,6 +1,6 @@
 package com.example.demo.domain.subscription;
 
-import com.example.demo.domain.course.Course;
+import com.example.demo.Entity.Course;
 import com.example.demo.Entity.User;
 import jakarta.persistence.*;
 import java.time.Instant;
