@@ -1,4 +1,4 @@
-package com.example.demo.domain.user;
+package com.example.demo.Entity;
 
 import jakarta.persistence.*;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.example.demo.domain.course;
+package com.example.demo.Entity;
 
 import jakarta.persistence.*;
 import java.time.Instant;

@@ -1,5 +1,6 @@
-package com.example.demo.domain.subscription;
+package com.example.demo.repository;
 
+import com.example.demo.Entity.Subscription;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 
