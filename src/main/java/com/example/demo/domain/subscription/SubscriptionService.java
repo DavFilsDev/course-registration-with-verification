@@ -1,5 +1,6 @@
 package com.example.demo.domain.subscription;
 
+import com.example.demo.Entity.Subscription;
 import com.example.demo.domain.course.CourseRepository;
 import com.example.demo.domain.user.UserRepository;
 import com.example.demo.mail.Email;
