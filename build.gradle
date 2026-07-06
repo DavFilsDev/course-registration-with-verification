@@ -146,7 +146,10 @@ dependencies {
     testImplementation 'org.testcontainers:testcontainers-junit-jupiter:2.0.2'
     testImplementation 'org.junit-pioneer:junit-pioneer:2.2.0'
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.2.2'
-    runtimeOnly 'org.postgresql:postgresql:42.7.3'
+org.postgresql:postgresql:42.7.3
+jakarta.mail:jakarta.mail-api:2.1.2
+org.springframework.boot:spring-boot-starter-data-jpa:3.2.2
+org.eclipse.angus:angus-mail:2.0.2
+
 
 }
