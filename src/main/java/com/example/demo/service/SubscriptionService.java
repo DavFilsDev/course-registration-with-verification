@@ -47,7 +47,7 @@ public class SubscriptionService {
   }
 
   @Async
-  private void sendConfirmation(String to, String firstName, String courseTitle) {
+  public void sendConfirmation(String to, String firstName, String courseTitle) {
     try {
       mailer.accept(
           new Email(
