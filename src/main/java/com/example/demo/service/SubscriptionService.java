@@ -14,6 +14,7 @@ import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -45,6 +46,7 @@ public class SubscriptionService {
     return subscription;
   }
 
+  @Async
   private void sendConfirmation(String to, String firstName, String courseTitle) {
     try {
       mailer.accept(
